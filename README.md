@@ -2,6 +2,8 @@
 
 Plugin do Claude Code que consulta a legislação portuguesa consolidada guardada no repo público [LawAgents/pt](https://github.com/LawAgents/pt) e cita sempre a fonte oficial. Responde só com o que está no repo e nunca de memória.
 
+Só precisas de instalar este plugin. Os dados não se instalam: o plugin lê-os pela internet do repositório LawAgents/pt, que se atualiza sozinho todas as semanas.
+
 ## O que faz
 
 Três comandos:
