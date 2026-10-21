@@ -1,0 +1,13 @@
+{
+  "name": "legislacao-pt",
+  "owner": {
+    "name": "LawAgents"
+  },
+  "plugins": [
+    {
+      "name": "legislacao-pt",
+      "source": "./",
+      "description": "Consulta legislação portuguesa consolidada no repo público LawAgents/pt e cita sempre a fonte oficial."
+    }
+  ]
+}
