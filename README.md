@@ -25,8 +25,9 @@ Cada resposta com legislação termina com o bloco `Fontes:` (título, id, fiche
 ## Privacidade
 
 - O plugin não escreve ficheiros no teu computador, não guarda registos e não tem contas.
-- Só lê ficheiros públicos em `raw.githubusercontent.com/LawAgents/pt`. Não contacta mais nenhum serviço.
-- A tua pergunta não é enviada a nenhum serviço de pesquisa: o plugin só pede ficheiros do repo, por caminhos conhecidos.
+- Só lê ficheiros públicos em `raw.githubusercontent.com/LawAgents/pt`, com `curl` em modo de leitura (e `awk`, `grep` e `sed` para escolher o trecho). Não contacta mais nenhum serviço.
+- A tua pergunta não vai no endereço: o plugin só pede ficheiros do repo por caminhos que vêm dos índices. Do que escreves, só o número do artigo e as palavras da pesquisa são usados, localmente, para escolher o trecho do ficheiro.
+- Os comandos pedem permissão só para `curl`, `awk`, `grep`, `sed`, `head` e `tail`; as ferramentas de escrita e de pesquisa na web ficam desligadas nos comandos.
 
 ## Aviso
 

@@ -1,6 +1,6 @@
 {
   "name": "legislacao-pt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Consulta legislação portuguesa consolidada no repo público LawAgents/pt e cita sempre a fonte oficial. Três comandos: /lei, /artigo e /pesquisar-lei.",
   "author": {
     "name": "LawAgents"
