@@ -1,6 +1,6 @@
 {
   "name": "legislacao-pt",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Consulta legislação portuguesa e legislação da União Europeia (regulamentos e diretivas) nos repos públicos LawAgents/pt e LawAgents/ue-pt e cita sempre a fonte oficial. Comandos: /lei, /artigo, /pesquisar-lei, /lei-ue, /artigo-ue e /pesquisar-ue.",
   "author": {
     "name": "LawAgents"

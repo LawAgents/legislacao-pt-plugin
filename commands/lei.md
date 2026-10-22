@@ -60,7 +60,7 @@ A call failed if its output contains a line that starts with `curl:`. Empty outp
 8. Otherwise print the sheet, in this order, with values only from the front matter and headings:
    - the `title` in bold;
    - `Estado: {status}`;
-   - `Versão consolidada: {last_amended}`; if `last_amended` is empty and `text_version` is `original sem alterações`, print `Versão: original sem alterações, publicado em {date}`;
+   - `Versão consolidada: {last_amended}`; if `last_amended` is empty and `text_version` is `original sem alterações`, print `Versão: original sem alterações, publicado em {date}`; if `text_version` is `original sem consolidação`, print `Versão: original, sem consolidação, publicado em {date}` and the line `Texto original, sem consolidação: pode ter sido alterado depois.`;
    - `Sumário: {summary}` (leave the line out if `summary` is empty);
    - `Estrutura:` as an indented list of the heading lines (livros, títulos, capítulos, secções), with article headings left out;
    - SOURCES_HEADER, one line per diploma used, then NOTICE.
@@ -71,4 +71,4 @@ One line per diploma, fields in this order, taken from the front matter of the f
 
 `- {title} | id: {id} | ficheiro: {path} | estado: {status} | versão consolidada: {last_amended} | oficial: {source}`
 
-`path` is the repo path you read. `oficial` is always the `source` field, never a GitHub URL. For an original without consolidation write `versão: original sem alterações, publicado em {date}` in place of the `versão consolidada` field. NOTICE goes on the line right below the last Fontes line.
+`path` is the repo path you read. `oficial` is always the `source` field, never a GitHub URL. For an original without consolidation write `versão: original sem alterações, publicado em {date}` in place of the `versão consolidada` field. When `text_version` is `original sem consolidação` (a diploma the Diário da República does not consolidate), write `versão: original, sem consolidação, publicado em {date}` instead, and put the line `Texto original, sem consolidação: pode ter sido alterado depois.` on its own line right before `Fontes:`. NOTICE goes on the line right below the last Fontes line.

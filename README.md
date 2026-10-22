@@ -55,10 +55,10 @@ Exemplos: `/lei Código Civil`, `/artigo Código Civil 483`, `/pesquisar-lei arr
 
 | Repositório | Conteúdo | Atos |
 | --- | --- | ---: |
-| [LawAgents/pt](https://github.com/LawAgents/pt) | Legislação portuguesa em vigor que o Diário da República disponibiliza consolidada, mais os originais nunca alterados | 4.968 |
+| [LawAgents/pt](https://github.com/LawAgents/pt) | Legislação portuguesa em vigor que o Diário da República disponibiliza consolidada, mais os originais nunca alterados e uma lista escolhida de diplomas sem consolidação | 4.987 |
 | [LawAgents/ue-pt](https://github.com/LawAgents/ue-pt) | Regulamentos de base e diretivas da UE em vigor, em português | 5.439 |
 
-Contagens de 2026-10-22. Ficam de fora: jurisprudência, regulamentos municipais, e na UE os atos delegados e de execução, as
+Contagens de 2026-10-22. Os diplomas sem consolidação (por exemplo o Decreto-Lei 84/2021) trazem o aviso "Texto original, sem consolidação: pode ter sido alterado depois." Ficam de fora: jurisprudência, regulamentos municipais, e na UE os atos delegados e de execução, as
 decisões e os tratados. Onde a UE só tem o texto original, a resposta avisa que "pode ter sido alterado depois".
 
 ---

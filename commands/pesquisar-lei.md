@@ -51,4 +51,4 @@ A call failed if its output contains a line that starts with `curl:`. Empty outp
 
 `- {title} | id: {id} | ficheiro: {path} | estado: {status} | versão consolidada: {last_amended} | oficial: {source}`
 
-`path` is the `caminho` column, `last_amended` and `source` come from the same row. `oficial` is always the `source` column, never a GitHub URL. When `last_amended` is empty (`text_version` is `original sem alterações`) write `versão: original sem alterações` in place of the `versão consolidada` field.
+`path` is the `caminho` column, `last_amended` and `source` come from the same row. `oficial` is always the `source` column, never a GitHub URL. When `last_amended` is empty (`text_version` is `original sem alterações`) write `versão: original sem alterações` in place of the `versão consolidada` field. When `text_version` is `original sem consolidação` write `versão: original, sem consolidação` instead, and add the line `Texto original, sem consolidação: pode ter sido alterado depois.` right before `Fontes:`.
