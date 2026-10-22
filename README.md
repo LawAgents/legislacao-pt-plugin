@@ -16,6 +16,19 @@ Três comandos:
 
 Exemplos: `/lei Código Civil`, `/artigo Código Civil 483`, `/pesquisar-lei arrendamento urbano`.
 
+### Legislação da União Europeia
+
+Três comandos gémeos leem o repo público [LawAgents/ue-pt](https://github.com/LawAgents/ue-pt) (regulamentos de base e diretivas da UE em vigor, em português):
+
+| Comando | O que devolve |
+|---|---|
+| `/lei-ue [nome, sigla ou número do ato]` | A ficha do ato (título, estado, versão consolidada ou original, sumário, estrutura por capítulos e anexos) e, nas diretivas, a lista de leis portuguesas de transposição. |
+| `/artigo-ue [nome, sigla ou número do ato] [número do artigo]` | O texto do artigo, palavra por palavra, com as fontes. |
+| `/pesquisar-ue [palavras]` | Até cinco atos encontrados nos índices, com as fontes. |
+
+Exemplos: `/lei-ue RGPD`, `/artigo-ue RGPD 17`, `/pesquisar-ue proteção de dados`. A linha de aviso é: "Texto sem valor legal: só o Jornal Oficial da União Europeia faz fé. Confirma no EUR-Lex antes de o usares. Não substitui aconselhamento jurídico." Quando o ato só tem o texto original, as respostas dizem também: "Texto original, sem consolidação: pode ter sido alterado depois."
+
+
 Cada resposta com legislação termina com o bloco `Fontes:` (título, id, ficheiro no repo, artigo, estado, data da versão consolidada e ligação oficial do Diário da República) e a linha: "Texto consolidado sem valor legal. Confirma no Diário da República antes de o usares. Não substitui aconselhamento jurídico."
 
 ## Como instalar no Claude Code
@@ -27,7 +40,7 @@ Cada resposta com legislação termina com o bloco `Fontes:` (título, id, fiche
 ## Privacidade
 
 - O plugin não escreve ficheiros no teu computador, não guarda registos e não tem contas.
-- Só lê ficheiros públicos em `raw.githubusercontent.com/LawAgents/pt`, com `curl` em modo de leitura (e `awk`, `grep` e `sed` para escolher o trecho). Não contacta mais nenhum serviço.
+- Só lê ficheiros públicos em `raw.githubusercontent.com/LawAgents/pt` e `raw.githubusercontent.com/LawAgents/ue-pt`, com `curl` em modo de leitura (e `awk`, `grep` e `sed` para escolher o trecho). Não contacta mais nenhum serviço.
 - A tua pergunta não vai no endereço: o plugin só pede ficheiros do repo por caminhos que vêm dos índices. Do que escreves, só o número do artigo e as palavras da pesquisa são usados, localmente, para escolher o trecho do ficheiro.
 - Os comandos pedem permissão só para `curl`, `awk`, `grep`, `sed`, `head` e `tail`; as ferramentas de escrita e de pesquisa na web ficam desligadas nos comandos.
 

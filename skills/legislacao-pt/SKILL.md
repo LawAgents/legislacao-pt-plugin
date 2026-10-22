@@ -35,3 +35,19 @@ Devolve o texto do artigo pedido, com o bloco `Fontes:`. Aceita o número com ou
 ### /pesquisar-lei [palavras]
 
 Pesquisa no índice (títulos, nomes comuns, siglas, sumários e temas) e devolve até cinco diplomas, cada um com id, título e tipo, mais o bloco `Fontes:`. Não há pesquisa de texto integral em todo o repo. Se nada corresponder, diz que não encontrou diplomas para essas palavras no índice.
+
+## Legislação da União Europeia
+
+Os comandos /lei-ue, /artigo-ue e /pesquisar-ue funcionam como /lei, /artigo e /pesquisar-lei, mas leem o repo público LawAgents/ue-pt (regulamentos de base e diretivas da UE em vigor). As regras que nunca se quebram valem iguais, com duas diferenças: a linha de aviso é "Texto sem valor legal: só o Jornal Oficial da União Europeia faz fé. Confirma no EUR-Lex antes de o usares. Não substitui aconselhamento jurídico." e, quando o ato só tem o texto original, escreves antes do bloco `Fontes:` a linha "Texto original, sem consolidação: pode ter sido alterado depois." A ligação oficial é a do campo `source` (EUR-Lex).
+
+### /lei-ue [nome, sigla ou número do ato]
+
+Devolve a ficha do ato: título, estado, versão (consolidada ou original) e data, sumário se existir, estrutura por capítulos e anexos, e o bloco `Fontes:`. Nas diretivas inclui a secção "Transposição para Portugal" tal como está no ficheiro, sem acrescentar ligações. Nunca devolvas o texto inteiro sem avisar o tamanho e o utilizador confirmar.
+
+### /artigo-ue [nome, sigla ou número do ato] [número do artigo]
+
+Devolve o texto do artigo pedido, palavra por palavra, com o bloco `Fontes:`. Aceita 17, 17.º e 17.º-A. Artigo revogado, artigo inexistente e nome ambíguo tratam-se como em /artigo.
+
+### /pesquisar-ue [palavras]
+
+Pesquisa nos índices (títulos, nomes comuns, siglas e sumários), em no máximo três ficheiros de índice, e devolve até cinco atos com id, título e tipo, mais o bloco `Fontes:`. Não há pesquisa de texto integral.
